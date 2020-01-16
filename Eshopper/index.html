@@ -24,7 +24,26 @@
     <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
 	<script>
 window.dataLayer = window.dataLayer || [];
+dataLayer.push({
+  'event': 'addToCart',
+  'ecommerce': {
+    'currencyCode': 'EUR',
+    'add': {                                // 'add' actionFieldObject measures.
+      'products': [{                        //  adding a product to a shopping cart.
+        'name': 'Triblend Android T-Shirt',
+        'id': '12345',
+        'price': '15.25',
+        'brand': 'Google',
+        'category': 'Apparel',
+        'variant': 'Gray',
+        'quantity': 1
+       }]
+    }
+  }
+});
 		</script>
+	
+	
 	<script type="text/javascript" src="//nexus.ensighten.com/ens-training16/google_tracking/Bootstrap.js"></script>
 	
 	
