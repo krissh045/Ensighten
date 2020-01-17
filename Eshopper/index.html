@@ -42,8 +42,31 @@ dataLayer.push({
   }
 });
 		</script>
+	<script>
+	let addToCart = (product, quantity) => {
+    Bootstrapper.ensEvent.trigger("Add cart", {"products": [
+     {
+      "id": product.id, 
+      "name": product.name, 
+      "brand": product.brand, 
+      "category": product.category, 
+      "variant": product.variant, 
+      "price": product.price,
+      "quantity": quantity
+     }
+    ]});
+  
+addToCart({
+    "id": "123456", 
+    "name": "Dracula Original", 
+    "brand": "Dracula Original", 
+    "category": "Book/Fiction", 
+    "variant": "NA-VariantID", 
+    price: 6.99
+  }, 
+  1);
 	
-	
+	</script>
 	<script type="text/javascript" src="//nexus.ensighten.com/ens-training16/google_tracking/Bootstrap.js"></script>
 	
 	
